@@ -55,7 +55,12 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© 2026 FIHM - Federal Institute of Hotel Management. All rights reserved.</p>
+          <div className="flex flex-col gap-1">
+            <p>© 2026 FIHM - Federal Institute of Hotel Management. All rights reserved.</p>
+            <p className="text-xs">
+              Developed by <a href="https://www.webtotalsolution.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">Web Total Solution</a>
+            </p>
+          </div>
           <div className="flex gap-8">
             <a href="#" className="hover:text-primary">Privacy Policy</a>
             <a href="#" className="hover:text-primary">Terms of Service</a>
