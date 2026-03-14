@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { Course } from '../types';
 import { Clock, GraduationCap, CheckCircle2 } from 'lucide-react';
 
@@ -35,12 +35,12 @@ export default function CourseCard({ course }: CourseCardProps) {
         )}
       </div>
       
-      <a 
-        href="#admission" 
-        className="w-full py-3 border border-primary text-primary rounded-full text-center font-medium hover:bg-primary hover:text-white transition-all"
+      <Link 
+        to="/admission" 
+        className="btn-premium border border-primary/10 text-primary hover:bg-primary hover:text-white text-sm uppercase tracking-widest font-bold"
       >
         Enquire Now
-      </a>
+      </Link>
     </div>
   );
 }
