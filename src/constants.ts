@@ -2,6 +2,36 @@ import { Course } from './types';
 
 export const COURSES: Course[] = [
   {
+    id: 'online-ba',
+    title: 'Bachelor of Arts (B.A.)',
+    duration: '3 Years',
+    eligibility: '12th Pass',
+    price: '₹ 31,000',
+    description: 'Covers English communication, political theory, Indian Constitution, public administration, Western political thinkers, and more. Ideal for students seeking a broad academic foundation.',
+    accreditation: 'Mangalayatan University (UGC Approved)',
+    type: 'Online Degree'
+  },
+  {
+    id: 'online-bba',
+    title: 'Bachelor of Business Administration (B.B.A.)',
+    duration: '3 Years',
+    eligibility: '12th Pass',
+    price: '₹ 64,000',
+    description: 'A comprehensive program for students and working professionals looking to excel in business studies, leadership, and management.',
+    accreditation: 'Mangalayatan University (UGC Approved)',
+    type: 'Online Degree'
+  },
+  {
+    id: 'online-bca',
+    title: 'Bachelor of Computer Applications (B.C.A.)',
+    duration: '3 Years',
+    eligibility: '12th Pass',
+    price: '₹ 70,000',
+    description: 'Designed for students who want to excel in Computer Science and Applications. Covers modern software development and IT management.',
+    accreditation: 'Mangalayatan University (UGC Approved)',
+    type: 'Online Degree'
+  },
+  {
     id: 'bvoc-hm',
     title: 'BVOC In Hotel Management',
     duration: '3 Years',

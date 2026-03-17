@@ -7,7 +7,7 @@ export default function Courses() {
   const [filter, setFilter] = useState('All');
   const [search, setSearch] = useState('');
 
-  const categories = ['All', 'Degree', 'Diploma', 'Certificate'];
+  const categories = ['All', 'Online Degree', 'Degree', 'Diploma', 'Certificate'];
 
   const filteredCourses = COURSES.filter(course => {
     const matchesFilter = filter === 'All' || course.type === filter;

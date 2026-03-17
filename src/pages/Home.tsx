@@ -63,6 +63,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* University Collaboration Section */}
+      <section className="py-32 bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-6 block">Academic Partnership</span>
+              <h2 className="text-5xl md:text-7xl font-bold mb-10 leading-[0.9] text-primary">
+                Global Standards. <br />
+                <span className="text-accent font-serif italic">Online Flexibility.</span>
+              </h2>
+              <p className="text-xl text-primary/60 mb-8 font-light leading-relaxed">
+                FIHM Online is the proud Vocational Training Partner with <span className="text-primary font-bold">Mangalayatan University</span>, offering UGC recognized and NAAC A+ accredited online programs.
+              </p>
+              <div className="space-y-6 mb-10">
+                <div className="flex gap-4 items-center">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary">NAAC A+ Accreditated</h4>
+                    <p className="text-sm text-primary/40">Highest grade of academic excellence.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary">UGC Entitled</h4>
+                    <p className="text-sm text-primary/40">Recognized for government jobs & global acceptance.</p>
+                  </div>
+                </div>
+              </div>
+              <Link to="/about" className="btn-premium border border-primary/10 text-primary hover:bg-primary hover:text-white group">
+                Learn About Mangalayatan
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </Link>
+            </motion.div>
+            
+            <div className="relative">
+              <div className="aspect-square rounded-[3rem] overflow-hidden shadow-premium">
+                <img 
+                  src="https://images.unsplash.com/photo-1523050853061-850012f74724?auto=format&fit=crop&q=80&w=1000" 
+                  alt="University Students" 
+                  className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-1000"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="absolute -top-12 -left-12 glass p-8 rounded-[2rem] border-accent/20 max-w-[240px]">
+                <p className="text-accent text-3xl font-bold mb-1 italic">2026-27</p>
+                <p className="text-primary/60 text-[10px] font-bold uppercase tracking-widest leading-relaxed">Admissions open for Online Programs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy Section - High End Asymmetry */}
       <section className="py-32 bg-primary text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,14 +184,19 @@ export default function Home() {
       {/* CTA / Final Word */}
       <section className="py-44 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">Next Enrollment</span>
+          <span className="text-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">Admissions 2026-27</span>
           <h2 className="text-6xl md:text-8xl font-bold text-primary mb-12 leading-[0.9]">
-            The World is <br />
-            <span className="text-accent italic font-serif">Waiting.</span>
+            Hurry! <br />
+            <span className="text-accent italic font-serif text-5xl md:text-7xl block mt-4">Enquire Now</span>
           </h2>
-          <Link to="/admission" className="btn-premium bg-primary text-white px-12 py-6 text-sm uppercase tracking-[0.2em] font-bold hover:bg-accent shadow-2xl transition-all duration-700">
-            Apply for Admission 2026
-          </Link>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <Link to="/admission" className="btn-premium bg-primary text-white px-12 py-6 text-sm uppercase tracking-[0.2em] font-bold hover:bg-accent shadow-2xl transition-all duration-700">
+              Apply Online
+            </Link>
+            <a href="tel:+919319888888" className="btn-premium border border-primary/10 text-primary px-12 py-6 text-sm uppercase tracking-[0.2em] font-bold hover:bg-secondary transition-all duration-700">
+              Call Us: +91-9319-888-888
+            </a>
+          </div>
         </div>
       </section>
     </div>

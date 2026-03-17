@@ -4,7 +4,9 @@ export interface Course {
   duration: string;
   eligibility: string;
   accreditation?: string;
-  type: 'Degree' | 'Diploma' | 'Certificate';
+  price?: string;
+  description?: string;
+  type: 'Degree' | 'Diploma' | 'Certificate' | 'Online Degree';
 }
 
 export interface StudentSubmission {

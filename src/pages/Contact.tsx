@@ -1,88 +1,150 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function Contact() {
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Online Admissions',
+      desc: 'Speak directly with our university counselors.',
+      linkTitle: '+91-9319-888-888',
+      link: 'tel:+919319888888'
+    },
+    {
+      icon: Mail,
+      title: 'Email Us',
+      desc: 'Send us your queries for online & distance programs.',
+      linkTitle: 'admissions@muonline.ac.in',
+      link: 'mailto:admissions@muonline.ac.in'
+    },
+    {
+      icon: MapPin,
+      title: 'University Campus',
+      desc: 'Visit the main campus for administrative queries.',
+      linkTitle: 'Beswan, Aligarh, UP, India',
+      link: '#'
+    }
+  ];
+
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-32 pb-24 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about our courses or the admission process? We're here to help.
-          </p>
+        <div className="text-center mb-24">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block"
+          >
+            Connect With Us
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-5xl md:text-7xl font-bold mb-8 text-primary"
+          >
+            Always within <br />
+            <span className="text-accent italic font-serif">Reach.</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-primary/60 max-w-2xl mx-auto font-light leading-relaxed"
+          >
+            Whether you have questions about online degrees, offline hospitality courses, or the admission process, our elite counseling team is ready to guide you.
+          </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 mb-20">
-          <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Phone className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Call Us</h3>
-            <p className="text-gray-500 mb-4">Speak directly with our counselors.</p>
-            <a href="tel:+919870599777" className="text-lg font-bold text-primary hover:underline">+91 98705 99777</a>
-          </div>
-
-          <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Mail className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Email Us</h3>
-            <p className="text-gray-500 mb-4">Send us your queries anytime.</p>
-            <a href="mailto:info@fihm.in" className="text-lg font-bold text-primary hover:underline">info@fihm.in</a>
-          </div>
-
-          <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MapPin className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Visit Us</h3>
-            <p className="text-gray-500 mb-4">Our campus is open for visits.</p>
-            <p className="text-lg font-bold">A-60C, Sector 63, Noida, UP</p>
-          </div>
+        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+          {contactInfo.map((info, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-10 rounded-[3rem] border border-accent/10 shadow-premium group hover:bg-primary transition-all duration-700"
+            >
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
+                <info.icon className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-primary group-hover:text-white transition-colors">{info.title}</h3>
+              <p className="text-primary/50 mb-6 text-sm leading-relaxed group-hover:text-white/50 transition-colors">{info.desc}</p>
+              <a 
+                href={info.link} 
+                className="text-lg font-bold text-accent hover:text-primary group-hover:text-white group-hover:underline underline-offset-8 decoration-accent/30 flex items-center gap-2 transition-all"
+              >
+                {info.linkTitle}
+                <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </motion.div>
+          ))}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-          <div className="bg-secondary rounded-[3rem] p-12 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold mb-8">Campus Hours</h2>
-            <div className="space-y-6">
-              <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                <span className="font-medium">Monday - Friday</span>
-                <span className="text-gray-600">9:00 AM - 6:00 PM</span>
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="bg-primary text-white rounded-[4rem] p-12 md:p-20 flex flex-col justify-center relative overflow-hidden shadow-2xl"
+          >
+            <h2 className="text-4xl font-bold mb-12 font-serif italic text-accent">Office Locations</h2>
+            <div className="space-y-12">
+              <div className="flex gap-6">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
+                  <MapPin className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">FIHM Noida (HO)</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">Sector 63, Noida, Uttar Pradesh, India</p>
+                  <p className="text-accent text-sm mt-2 font-bold">+91 9319-813-813</p>
+                </div>
               </div>
-              <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                <span className="font-medium">Saturday</span>
-                <span className="text-gray-600">10:00 AM - 4:00 PM</span>
-              </div>
-              <div className="flex justify-between items-center pb-4">
-                <span className="font-medium">Sunday</span>
-                <span className="text-red-500 font-bold">Closed</span>
+              <div className="flex gap-6">
+                <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 border border-white/10">
+                  <MapPin className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">Mangalayatan University</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">Aligarh-Mathura Highway, Beswan, Aligarh, UP</p>
+                  <p className="text-accent text-sm mt-2 font-bold">+91 9319-845-845</p>
+                </div>
               </div>
             </div>
             
-            <div className="mt-12 p-6 bg-white rounded-2xl flex items-center gap-4">
-              <MessageSquare className="w-8 h-8 text-primary" />
+            <div className="mt-16 p-8 bg-white/5 rounded-3xl border border-white/10 flex items-center gap-6">
+              <div className="w-14 h-14 bg-accent rounded-full flex items-center justify-center">
+                <MessageSquare className="w-7 h-7 text-white" />
+              </div>
               <div>
-                <h4 className="font-bold">Chat with us</h4>
-                <p className="text-sm text-gray-500">Available on WhatsApp for quick queries.</p>
+                <h4 className="font-bold">Live Support</h4>
+                <p className="text-sm text-white/40">Available Mon-Sat, 9AM to 6PM</p>
               </div>
             </div>
-          </div>
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-1/2" />
+          </motion.div>
 
-          <div className="rounded-[3rem] overflow-hidden shadow-xl border border-gray-100 min-h-[400px] relative">
-            {/* Map Placeholder */}
-            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                <p className="text-gray-400 font-medium">Interactive Map Loading...</p>
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-[4rem] overflow-hidden shadow-premium border border-accent/10 min-h-[500px] relative group"
+          >
+            <div className="absolute inset-0 bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors duration-1000">
+              <div className="text-center group-hover:scale-110 transition-transform duration-1000">
+                <MapPin className="w-16 h-16 text-accent mx-auto mb-6 animate-bounce" />
+                <p className="text-primary/40 font-bold uppercase tracking-widest text-xs group-hover:text-white/40">Campus Map Navigation</p>
               </div>
             </div>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.712683935245!2d77.314856!3d28.578385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzQyLjIiTiA3N8KwMTgnNTMuNSJF!5e0!3m2!1sen!2sin!4v1625567890123!5m2!1sen!2sin" 
-              className="absolute inset-0 w-full h-full border-0 grayscale"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923!2d77.0688975!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c335e69b!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1625567890123!5m2!1sen!2sin" 
+              className="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 hover:opacity-100"
               allowFullScreen={true}
               loading="lazy"
             ></iframe>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
