@@ -6,23 +6,23 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Online Admissions',
-      desc: 'Speak directly with our university counselors.',
-      linkTitle: '+91-9319-888-888',
-      link: 'tel:+919319888888'
+      title: 'Direct Admissions',
+      desc: 'Connect with our corporate admissions desk in Noida.',
+      linkTitle: '+91-98705-99777',
+      link: 'tel:+919870599777'
     },
     {
       icon: Mail,
-      title: 'Email Us',
-      desc: 'Send us your queries for online & distance programs.',
-      linkTitle: 'admissions@muonline.ac.in',
-      link: 'mailto:admissions@muonline.ac.in'
+      title: 'Academic Queries',
+      desc: 'Email our academic counselors for course details.',
+      linkTitle: 'shikhasharma@ucplgroup.com',
+      link: 'mailto:shikhasharma@ucplgroup.com'
     },
     {
       icon: MapPin,
-      title: 'University Campus',
-      desc: 'Visit the main campus for administrative queries.',
-      linkTitle: 'Beswan, Aligarh, UP, India',
+      title: 'Corporate Office',
+      desc: 'Visit our Noida office for face-to-face counseling.',
+      linkTitle: 'Sector 63, Noida, UP',
       link: '#'
     }
   ];
@@ -97,9 +97,9 @@ export default function Contact() {
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-2">FIHM Noida (HO)</h4>
-                  <p className="text-white/50 text-sm leading-relaxed">Sector 63, Noida, Uttar Pradesh, India</p>
-                  <p className="text-accent text-sm mt-2 font-bold">+91 9319-813-813</p>
+                  <h4 className="text-xl font-bold mb-2">Corporate Office (Noida)</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">A60 C Sector 63 Noida 201301</p>
+                  <p className="text-accent text-sm mt-2 font-bold">+91 98705-99777</p>
                 </div>
               </div>
               <div className="flex gap-6">
@@ -107,9 +107,9 @@ export default function Contact() {
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-2">Mangalayatan University</h4>
+                  <h4 className="text-xl font-bold mb-2">Mangalayatan University Campus</h4>
                   <p className="text-white/50 text-sm leading-relaxed">Aligarh-Mathura Highway, Beswan, Aligarh, UP</p>
-                  <p className="text-accent text-sm mt-2 font-bold">+91 9319-845-845</p>
+                  <p className="text-accent text-sm mt-2 font-bold">+91 9358-333333</p>
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function Contact() {
               </div>
             </div>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923!2d77.0688975!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c335e69b!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1625567890123!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.45422847!2d77.387342!3d28.614603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c335e69b!2sSector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1625567890123!5m2!1sen!2sin" 
               className="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-1000 opacity-60 hover:opacity-100"
               allowFullScreen={true}
               loading="lazy"
